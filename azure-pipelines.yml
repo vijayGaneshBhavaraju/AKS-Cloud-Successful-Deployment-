@@ -48,13 +48,13 @@ stages:
     - task: Kubernetes@1
       displayName: Apply manifests to AKS
       inputs:
-        connectionType: Azure Resource Manager
-        azureSubscriptionEndpoint: AZURE-SERVICE-CONNECTION
-        azureResourceGroup: AKS_RESOURCE_GROUP
-        kubernetesCluster: mastercluster
-        namespace: default
-        command: apply
+        connectionType: 'Azure Resource Manager'
+        azureSubscriptionEndpoint: 'newsc'
+        azureResourceGroup: 'mastervijayb'
+        kubernetesCluster: 'mastercluster'
+        namespace: 'default'
+        command: 'apply'
         useConfigurationFile: true
-        configuration: |
-          k8s/deployment.yaml
-          k8s/service.yaml
+        configuration: 'k8s/deployment.ymlk8s/service.yml'
+        secretType: 'dockerRegistry'
+        containerRegistryType: 'Azure Container Registry'
