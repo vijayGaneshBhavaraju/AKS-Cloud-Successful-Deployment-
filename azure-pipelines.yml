@@ -42,7 +42,7 @@ stages:
     steps:
 
     - script: |
-        sed -i "s|IMAGE_PLACEHOLDER|$(containerRegistry)/$(imageRepository):$(tag)|g" k8s/deployment.yaml
+        sed -i "s|IMAGE_PLACEHOLDER|$(containerRegistry)/$(imageRepository):$(tag)|g" k8s/deployment.yml
       displayName: Update image tag
 
     - task: Kubernetes@1
