@@ -50,8 +50,8 @@ stages:
       inputs:
         connectionType: 'Azure Resource Manager'
         azureSubscriptionEndpoint: 'newsc'
-        azureResourceGroup: 'mastervijayb'
-        kubernetesCluster: 'mastercluster'
+        azureResourceGroup: 'mastervijay'
+        kubernetesCluster: 'masterscluster'
         namespace: 'default'
         command: 'apply'
         useConfigurationFile: true
