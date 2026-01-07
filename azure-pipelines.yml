@@ -1,8 +1,8 @@
 trigger:
-- master
+- none
 
 variables:
-  dockerRegistryServiceConnection: 'a8a41fca-07c4-4ac2-8bbd-3fe55ab024e6'
+  dockerRegistryServiceConnection: ''
   imageRepository: 'aksdeployment'
   containerRegistry: 'masterregestry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
