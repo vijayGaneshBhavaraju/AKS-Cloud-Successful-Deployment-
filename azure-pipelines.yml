@@ -55,6 +55,5 @@ stages:
         namespace: 'default'
         command: 'apply'
         useConfigurationFile: true
-        configuration: |
-          k8s
+        configuration: k8s
 
