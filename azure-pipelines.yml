@@ -3,8 +3,8 @@ trigger:
 
 variables:
   dockerRegistryServiceConnection: ''
-  imageRepository: 'aksdeployment'
-  containerRegistry: 'masterregestry.azurecr.io'
+  imageRepository: 'aks-deployment'
+  containerRegistry: 'master1regestry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
   vmImageName: 'ubuntu-latest'
