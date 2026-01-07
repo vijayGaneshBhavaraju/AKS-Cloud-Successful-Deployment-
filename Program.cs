@@ -6,6 +6,9 @@ namespace AKSDeployment
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Bind Kestrel to all interfaces on port 8080 (required for AKS)
+            builder.WebHost.UseUrls("http://0.0.0.0:8080");
+
             // Add services to the container.
             builder.Services.AddRazorPages();
 
@@ -15,15 +18,14 @@ namespace AKSDeployment
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            // NOTE: Do NOT use HTTPS redirection in AKS LoadBalancer scenario
+            // app.UseHttpsRedirection();
+
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.MapRazorPages();
