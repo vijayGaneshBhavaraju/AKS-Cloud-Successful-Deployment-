@@ -1,3 +1,6 @@
+#Deployment ante oka pod ni create cheyyadaniki plan laga untundi. Ee YAML lo replicas: 1 undi kabatti only oka pod run avutundi. 
+#Pod ki app: aksdeployment ane label istaru, andulo oka container untadi, adi IMAGE_PLACEHOLDER ane image ni use chesi 8080 port meeda app run chestundi. 
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,3 +20,4 @@ spec:
         image: IMAGE_PLACEHOLDER
         ports:
         - containerPort: 8080
+
