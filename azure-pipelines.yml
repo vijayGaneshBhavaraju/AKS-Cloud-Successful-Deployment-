@@ -1,5 +1,7 @@
 trigger:
-- none
+- 'dev-*'
+- 'qa-*'
+- master
 
 variables:
   dockerRegistryServiceConnection: '58a0d1a8-4ada-4c29-bf5b-07ec8e3a39fa'
