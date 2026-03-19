@@ -1,6 +1,7 @@
 trigger:
 - 'dev-*'
 - 'qa-*'
+- prod
 - master
 
 variables:
